@@ -1,0 +1,79 @@
+@import "compass/css3";
+
+/* Space out content a bit */
+body {
+    font-size: 20px;
+}
+
+// Navigation Bar with Dropdown
+$button-bg: #1abc9c;
+$button-focus: #16a085;
+
+p {
+    a {
+      color: $button-bg;
+      &:hover {
+        color: darken($button-bg,5%);
+      }
+    }
+}
+
+ul {
+  li {
+    a {
+      color: $button-bg;
+      &:hover {
+        color: darken($button-bg,5%);
+      }
+    }
+  }
+}
+
+nav {
+  h2 {
+    font-weight: 300;
+    color: #5c6d7e;
+  }
+  .button {
+    border:0;
+    background: $button-bg;
+    @include box-shadow(0);
+    font-size: emCalc(12px);
+    color: rgba(255,255,255,.8);
+    text-transform: uppercase;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    @include box-shadow(0px 4px 0px #16a085);
+    &:hover {
+      background: darken($button-bg,5%);
+      color: rgba(255,255,255,1);
+      @include box-shadow(0px 4px 0px #bdc3c7);
+    }
+    &:active {
+      @include box-shadow(0px 4px 0px #a74d46);
+      background: darken($button-bg,8%);
+    }
+    &:focus {
+      background: darken($button-focus, 5%);
+    }
+  }
+}
+.pricing-table.pricing-table-hot:before {
+    background: url('../images/ribbon.png') no-repeat scroll 0px 0px / 82px 82px transparent;
+    content: "";
+    height: 82px;
+    position: absolute;
+    right: -3px;
+    top: -4px;
+    width: 96px;
+}
+
+.container {
+    max-width: 100%;
+    margin-top: 10%;    
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+
+}
