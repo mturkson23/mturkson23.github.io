@@ -28,7 +28,9 @@ function geoLocate() {
 			center: locs
 		};
 		map = new google.maps.Map(document.getElementById('map'), mapOptions);
-		
+		google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
+			$('#loader').hide();
+		});	
 		var marker = new google.maps.Marker({
 			position: locs,
 			map: map,
