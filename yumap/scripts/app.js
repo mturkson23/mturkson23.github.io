@@ -25,7 +25,15 @@ function geoLocate() {
 		var locs = new google.maps.LatLng(latitude, longitude);
 		var mapOptions = {
 			zoom: 16,
-			center: locs
+			center: locs,
+			zoomControl: true,
+			zoomControlOptions : {
+				style: google.maps.ZoomControlStyle.SMALL
+			},
+			mapTypeControl: true,
+			mapTypeControlOptions: {
+				style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+			}
 		};
 		map = new google.maps.Map(document.getElementById('map'), mapOptions);
 		google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
@@ -36,6 +44,7 @@ function geoLocate() {
 			map: map,
 			title: "I'm Here!"
 		});
+		output.innerHTML  = "<p>Your longitude is " + longitude +" and your latitude is " + latitude +"</p>";
 	}
 	//in case there is an error
 	function error()
