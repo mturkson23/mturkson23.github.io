@@ -1,0 +1,9 @@
+html { height: 100%; }
+body {
+	height: 100%;
+	color: rgba(51, 51, 51, 0.72);
+	background: url('../img/green_cup.png') 100%;
+}
+
+.container { margin-left:auto; margin-right:auto; }
+#map { height: 100%; width: 100%; min-height: 500px;}

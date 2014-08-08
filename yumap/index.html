@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>yumap</title>
     <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
     <title>Find Me</title>
+    <link rel="stylesheet" type="text/css" href="styles/app.css" />
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
   </head>
-  <body onload="geolocate()">
-          <div>
+  <body>
+          <div class="container">
                 <center>
                     <h3>
                         <!--You are currently standing here: <span id="latlng"></span>-->
-                        You are currently here <h1><span id="latlng"></span></h1>
+                        <h1><span id="latlng"></span></h1>
                     </h3>
                 </center>
+		<div id="map"></div>
         </div>
   </body>
   <script src="scripts/app.js"></script>
