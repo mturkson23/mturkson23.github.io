@@ -1,31 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <title>yumap</title>
-    <meta name="viewport" content="width=device-width">
-    <meta charset="utf-8">
-    <title>Find Me</title>
-    <link rel="stylesheet" type="text/css" href="styles/app.css" />
-    <link rel="stylesheet" type="text/css" href="styles/loader.css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp?key=AIzaSyDVfX_4uGQOBFzByOJo6kRuLzqvxeAFG4w"></script>
-  </head>
-  <body>
-	<div class="loader" id="loader">
-  		<div class="green"></div>
-  		<div class="red"></div>
-  		<div class="blue"></div>
-  		<div class="yellow"></div>
-	</div>
-          <div class="container">
-                <center>
-                    <h3>
-                        <!--You are currently standing here: <span id="latlng"></span>-->
-                        <h1><span id="latlng"></span></h1>
-                    </h3>
-                </center>
-		<div id="map"></div>
-        </div>
-  </body>
-  <script src="scripts/app.js"></script>
+
+<head>
+      <title>yumap</title>
+      <meta name="viewport" content="width=device-width">
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="styles/app.css" />
+      <link rel="stylesheet" type="text/css" href="styles/loader.css" />
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+      <script src="https://maps.googleapis.com/maps/api/js?v=3.exp?key=AIzaSyDVfX_4uGQOBFzByOJo6kRuLzqvxeAFG4w&libraries=places"></script>
+
+</head>
+
+<body>
+      <div class="loader" id="loader">
+            <div class="green"></div>
+            <div class="red"></div>
+            <div class="blue"></div>
+            <div class="yellow"></div>
+      </div>
+      <center>
+            <h3>
+                       <!--You are currently standing here: <span id="latlng"></span>-->
+                       <span id="latlng"></span>
+                  </h3>
+      </center>
+      <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+      <div id="map"></div>
+</body>
+<script src="scripts/app.js"></script>
+
 </html>
